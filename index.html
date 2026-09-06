@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Mechanical Engineer Portfolio</title>
+<style>
+:root{--bg:#020812;--panel:#061321;--panel2:#081a2b;--line:#173854;--line2:#245a80;--text:#edf6ff;--muted:#8fa8bd;--blue:#39a7ff;--cyan:#36e0d0;--green:#59dc8d;--gold:#e4bd62}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(circle at 74% 7%,#0b2b49 0,transparent 28%),linear-gradient(135deg,#020711,#03101c 55%,#020711);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}button{font:inherit}.app{min-height:100vh;display:grid;grid-template-columns:228px 1fr}.side{position:fixed;left:0;top:0;bottom:0;width:228px;border-right:1px solid #17334a;background:linear-gradient(180deg,rgba(4,17,29,.98),rgba(3,13,23,.98));padding:28px 15px;z-index:20}.identity{text-align:center;padding:8px 10px 23px;border-bottom:1px solid #17334a}.avatar{width:82px;height:82px;border-radius:50%;margin:auto;background:radial-gradient(circle at 50% 38%,#dde8f2 0 26%,#52677b 27% 29%,#081523 30%);display:grid;place-items:center;font-size:28px;font-weight:700;border:2px solid #8ba5bb;color:#07111b}.identity h2{margin:12px 0 3px;font-size:20px}.identity p{margin:0;color:#8ba2b5;font-size:11px}.identity em{display:block;color:#41c9ff;font-style:normal;font-size:11px;margin-top:7px}.menu{margin-top:20px}.menuTitle{font-size:9px;letter-spacing:.16em;color:#4d6b84;padding:12px 10px}.menu button{width:100%;border:0;background:transparent;color:#8da5b9;text-align:left;padding:12px;border-radius:9px;cursor:pointer;margin:2px 0}.menu button:hover,.menu button.active{background:linear-gradient(90deg,#0b3b67,#09223a);color:#fff;box-shadow:inset 3px 0 var(--blue)}.menu .sub{font-size:12px}.menu .sub small{display:block;color:#5f7d95;margin-top:4px}.main{grid-column:2;padding:18px 20px 28px;min-width:0}.topbar{height:48px;display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:10px;background:rgba(4,16,28,.86);padding:0 12px;position:sticky;top:8px;z-index:10;backdrop-filter:blur(12px)}.topbar .title{font-size:13px;color:#58d9ff;white-space:nowrap}.tabs{display:flex;gap:4px;flex:1;justify-content:center}.tab{border:1px solid #23435d;background:#0a1825;color:#92a9bc;padding:8px 20px;min-width:145px;clip-path:polygon(8% 0,92% 0,100% 50%,92% 100%,8% 100%,0 50%);cursor:pointer}.tab.active{background:linear-gradient(135deg,#0d78ca,#154b7b);color:#fff;border-color:#36afff}.actions{display:flex;gap:7px}.action{border:1px solid #29475f;background:#081521;color:#a9bed0;border-radius:7px;padding:8px 10px;cursor:pointer}.action:hover{border-color:#3c9bd0;color:#fff}.page{display:none;min-height:calc(100vh - 82px);padding-top:12px}.page.active{display:block}.module{min-height:calc(100vh - 88px);border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,rgba(6,21,36,.98),rgba(3,14,25,.98));box-shadow:0 28px 80px rgba(0,0,0,.32);padding:26px;position:relative;overflow:hidden}.module:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 0 60%,rgba(46,145,212,.06) 60.1% 61%,transparent 61.1%);pointer-events:none}.moduleHeader{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:22px;position:relative}.num{font-size:48px;line-height:1;color:#54c8ff;font-weight:700}.moduleHeader h1{font-size:34px;margin:0 0 4px}.moduleHeader p{margin:0;color:#9eb1c1;font-size:14px}.badge{border:1px solid #2f6282;color:#75d8ff;border-radius:999px;padding:7px 12px;font-size:10px;letter-spacing:.1em}.heroGrid{display:grid;grid-template-columns:.92fr 1.08fr;gap:28px;align-items:center;position:relative}.story{display:grid;gap:16px}.storyItem{display:grid;grid-template-columns:50px 1fr;gap:14px;align-items:start}.icon{width:44px;height:44px;border:1px solid #206398;border-radius:9px;display:grid;place-items:center;color:#55c8ff;font-size:21px;background:#071b2c}.storyItem h3{font-size:15px;color:#5fcaff;margin:1px 0 6px}.storyItem p{font-size:12px;line-height:1.68;color:#b1c0cd;margin:0}.imagePanel{border:1px solid #184c72;background:#020a12;border-radius:13px;min-height:520px;display:grid;place-items:center;overflow:hidden;position:relative}.imagePanel img{width:100%;height:100%;max-height:590px;object-fit:contain}.caption{position:absolute;left:12px;bottom:12px;padding:8px 11px;background:rgba(2,10,18,.88);border:1px solid #275676;border-radius:7px;color:#a8bdcd;font-size:10px}.objectives{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px}.objective{border:1px solid #1a4461;background:#071827;border-radius:10px;padding:14px;text-align:center;color:#a9bdcd;font-size:11px}.objective b{display:block;color:#e8f5ff;margin-bottom:5px}.contentGrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:22px;position:relative}.copyCard,.mediaCard{border:1px solid #174666;background:rgba(5,21,36,.9);border-radius:13px;padding:20px}.copyCard h2{color:#54c7ff;font-size:21px;margin:0 0 16px}.bullets{display:grid;gap:13px}.bullet{color:#b5c4d0;font-size:13px;line-height:1.65;padding-left:17px;position:relative}.bullet:before{content:"•";position:absolute;left:0;color:#43baff}.mediaCard{padding:12px;min-height:600px;display:grid;place-items:center}.mediaCard img{max-width:100%;max-height:570px;object-fit:contain}.effect{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:16px}.effect div{border:1px solid #1e4a68;background:#061725;border-radius:8px;padding:12px;font-size:10px;text-align:center;color:#9bb1c2}.devGrid{display:grid;grid-template-columns:.72fr 1.28fr;gap:18px}.devVisuals{display:grid;grid-template-rows:1fr 1.32fr;gap:12px}.devVisuals .imgBox{border:1px solid #184b70;border-radius:11px;background:#020a12;overflow:hidden;display:grid;place-items:center;min-height:240px}.devVisuals img{width:100%;height:100%;object-fit:contain}.resultList{display:grid;gap:9px;margin-top:20px}.result{border-left:3px solid var(--green);background:#071a27;padding:11px 12px;color:#b5c8d5;font-size:12px}.lessonGrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:22px}.lessonCards{display:grid;gap:12px}.lesson{border:1px solid #1c4764;background:#061725;border-radius:10px;padding:16px}.lesson h3{margin:0 0 8px;color:#54c7ff;font-size:15px}.lesson p{margin:0;color:#afc0cc;font-size:12px;line-height:1.7}.growth{margin-top:14px;border:1px solid #1d4c6c;background:#061928;border-radius:11px;padding:15px}.growth h3{margin:0 0 10px;color:#e7f5ff;font-size:14px}.check{color:#a9c0cf;font-size:12px;line-height:1.8}.check:before{content:"✓";color:#55e48e;margin-right:8px}.overviewGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.overviewCard{border:1px solid #1d4b6c;background:linear-gradient(145deg,#071b2d,#04121f);border-radius:12px;padding:16px;min-height:300px;cursor:pointer;transition:.2s}.overviewCard:hover{transform:translateY(-3px);border-color:#41a8dc}.overviewCard h2{font-size:19px;color:#62cfff;margin:0 0 10px}.overviewCard p{color:#a7b8c5;font-size:11px;line-height:1.55}.overviewCard img{width:100%;height:190px;object-fit:contain;border-radius:8px;background:#020a12;margin-top:10px}.quote{margin-top:15px;border:1px solid #1b4765;background:#061725;border-radius:11px;padding:15px 18px;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#b9c9d5;font-size:12px}.quote b{color:#55caff;font-size:17px}.framework{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding-top:18px}.framework article{border:1px solid #1c4561;background:#071725;border-radius:13px;padding:22px;min-height:210px}.framework h2{color:#5ccaff;font-size:20px}.framework p{color:#a9bac7;font-size:13px;line-height:1.7}.footerNav{display:flex;justify-content:center;gap:8px;margin-top:15px}.footerNav button{border:1px solid #28516d;background:#071725;color:#a9bdcc;border-radius:8px;padding:10px 16px;cursor:pointer}.footerNav button:hover{border-color:#43a7dc;color:#fff}
+.casePosterWrap{min-height:calc(100vh - 120px);display:flex;flex-direction:column;gap:14px}.casePoster{flex:1;border:1px solid #1d4f72;border-radius:14px;background:#020a12;padding:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 22px 70px rgba(0,0,0,.32)}.casePoster img{display:block;width:100%;height:auto;max-height:calc(100vh - 165px);object-fit:contain;border-radius:9px}.casePosterNote{display:flex;justify-content:space-between;gap:18px;align-items:center;border:1px solid #194762;background:#061725;border-radius:10px;padding:11px 15px;color:#9fb5c5;font-size:11px}.casePosterNote b{color:#54caff;font-size:13px}.casePosterActions{display:flex;gap:8px}.casePosterActions button{border:1px solid #28516d;background:#081725;color:#a9bdcc;border-radius:7px;padding:8px 11px;cursor:pointer}.casePosterActions button:hover{border-color:#43a7dc;color:#fff}
+@media(max-width:1050px){.app{grid-template-columns:1fr}.side{display:none}.main{grid-column:1}.tabs{overflow:auto;justify-content:flex-start}.tab{min-width:125px}.heroGrid,.contentGrid,.devGrid,.lessonGrid{grid-template-columns:1fr}.overviewGrid{grid-template-columns:1fr}.objectives,.effect{grid-template-columns:repeat(2,1fr)}}
+
+.eqSpecGrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:22px}
+.eqSpecs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.eqSpec{border:1px solid #1b4d70;background:#061928;border-radius:11px;padding:16px}
+.eqSpec small{display:block;color:#5ccaff;font-size:10px;letter-spacing:.08em;margin-bottom:7px}
+.eqSpec strong{font-size:22px;color:#eef8ff}
+.eqSpec p{margin:6px 0 0;color:#9db2c2;font-size:11px;line-height:1.55}
+.btsDiagram{height:100%;min-height:520px;border:1px solid #184c72;border-radius:13px;background:radial-gradient(circle at 50% 45%,#0c3555,#020b14 68%);position:relative;overflow:hidden}
+.btsBlade{position:absolute;left:13%;right:13%;top:43%;height:52px;background:linear-gradient(180deg,#f4f7fa,#aab9c5);border-radius:70% 18px 18px 70%;transform:skewX(-5deg);box-shadow:0 16px 30px rgba(0,0,0,.35)}
+.btsStand{position:absolute;top:25%;width:145px;height:245px;border:18px solid #73818d;border-radius:70px;background:#0b151e;box-shadow:0 0 0 7px #253743,0 20px 30px rgba(0,0,0,.45)}
+.btsStand:after{content:"";position:absolute;left:-32px;right:-32px;bottom:-50px;height:36px;border-radius:7px;background:#3f4c56;box-shadow:0 12px 0 #1d2830}
+.btsStand.left{left:6%}.btsStand.right{right:6%}
+.btsLabel{position:absolute;color:#6ed8ff;font-size:11px;letter-spacing:.08em}.btsLabel.root{right:8%;top:18%}.btsLabel.tip{left:8%;top:18%}
+.flowSteps{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:18px}
+.flowStep{border:1px solid #1b4b6d;border-radius:10px;background:#071a2a;padding:15px 9px;text-align:center;color:#a9bdcc;font-size:10px;position:relative}
+.flowStep b{display:block;color:#5fcaff;font-size:17px;margin-bottom:7px}
+.flowStep:not(:last-child):after{content:"→";position:absolute;right:-10px;top:42%;color:#3d9dd4;font-size:17px;z-index:2}
+.caseGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.caseCard{border:1px solid #1d4c6d;background:linear-gradient(145deg,#071b2d,#04121f);border-radius:13px;padding:20px;min-height:470px}
+.caseCard.green{border-color:#2c6b49;background:linear-gradient(145deg,#09281d,#061a14)}
+.caseCard h2{margin:0 0 5px;color:#61cdff;font-size:18px}.caseCard.green h2{color:#72e6a0}
+.caseCard .caseSub{font-size:10px;color:#7f98aa;margin-bottom:18px}
+.caseFlow{display:grid;gap:8px}.caseFlow div{border:1px solid #245879;border-radius:7px;padding:10px;text-align:center;color:#afc2d0;font-size:11px;background:#061724}
+.caseCard.green .caseFlow div{border-color:#337755;background:#082319}
+.arrowDown{text-align:center;color:#48bdf7;font-size:15px;line-height:1}
+.skillPath{display:grid;grid-template-columns:1fr 65px 1.25fr 65px 1fr;align-items:center;gap:10px;margin:25px 0}
+.skillStage{border:1px solid #1b4c6c;border-radius:13px;padding:22px;text-align:center;background:#061827;min-height:180px}
+.skillStage h3{color:#5ccaff;margin:0 0 13px}.skillStage p{color:#a9bbc8;font-size:11px;line-height:1.8;margin:0}
+.skillArrow{text-align:center;font-size:32px;color:#4ebcf5}
+.eqOverviewGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.eqOverviewCard{border:1px solid #1d4b6c;background:linear-gradient(145deg,#071b2d,#04121f);border-radius:12px;padding:20px;min-height:300px;cursor:pointer;transition:.2s}
+.eqOverviewCard:hover{transform:translateY(-3px);border-color:#41a8dc}
+.eqOverviewCard h2{font-size:20px;color:#62cfff;margin:0 0 10px}.eqOverviewCard p{color:#a7b8c5;font-size:12px;line-height:1.65}
+.eqMiniFlow{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:18px}.eqMiniFlow span{border:1px solid #235372;border-radius:7px;padding:10px 6px;text-align:center;font-size:10px;color:#a9bdca}
+@media(max-width:1050px){.eqSpecGrid,.caseGrid,.skillPath{grid-template-columns:1fr}.skillArrow{transform:rotate(90deg)}.flowSteps{grid-template-columns:1fr}.flowStep:after{display:none}.eqOverviewGrid{grid-template-columns:1fr}}
+
+.eqInternalNav{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:0 0 18px}
+.eqInternalNav button{border:1px solid #234b67;background:#071522;color:#92aabd;border-radius:8px;padding:10px 8px;cursor:pointer;font-size:11px}
+.eqInternalNav button:hover,.eqInternalNav button.active{background:linear-gradient(135deg,#0d78ca,#154b7b);color:#fff;border-color:#36afff}
+@media(max-width:1050px){.eqInternalNav{grid-template-columns:1fr}}
+
+/* V14 native equipment internship modules */
+.eqNativeNav{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:18px}
+.eqNativeNav button{border:1px solid #234b67;background:#071522;color:#92aabd;border-radius:9px;padding:11px 8px;cursor:pointer;font-size:11px}
+.eqNativeNav button:hover,.eqNativeNav button.active{background:linear-gradient(135deg,#0d78ca,#154b7b);color:#fff;border-color:#36afff}
+.eqTwoCol{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}
+.eqInfoGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.eqInfoCard{border:1px solid #1a4a6b;border-radius:12px;background:#061928;padding:17px}
+.eqInfoCard small{display:block;color:#59caff;font-size:10px;letter-spacing:.1em;margin-bottom:7px}
+.eqInfoCard strong{display:block;color:#eef8ff;font-size:23px;margin-bottom:7px}
+.eqInfoCard p{margin:0;color:#9fb3c3;font-size:11px;line-height:1.6}
+.eqRoleCard{margin-top:14px;border:1px solid #1b4b69;border-radius:12px;background:#061826;padding:18px}
+.eqRoleCard h2{margin:0 0 14px;color:#5fcaff;font-size:20px}
+.eqRoleCard ul{margin:0;padding-left:20px;color:#adc0cd;font-size:12px;line-height:1.85}
+.eqBtsScene{min-height:525px;border:1px solid #184c72;border-radius:14px;background:radial-gradient(circle at 50% 46%,#0d3453 0,#06192a 44%,#020b14 76%);position:relative;overflow:hidden}
+.eqBtsScene .blade{position:absolute;left:14%;right:14%;top:45%;height:52px;background:linear-gradient(180deg,#f7f9fb,#aebdca);border-radius:75% 18px 18px 75%;box-shadow:0 14px 35px rgba(0,0,0,.38)}
+.eqBtsScene .stand{position:absolute;top:24%;width:145px;height:255px;border:18px solid #7b8995;border-radius:70px;background:#0a141d;box-shadow:0 0 0 7px #273a47,0 20px 30px rgba(0,0,0,.45)}
+.eqBtsScene .stand:after{content:"";position:absolute;left:-33px;right:-33px;bottom:-53px;height:38px;border-radius:7px;background:#4a5863;box-shadow:0 13px 0 #202b33}
+.eqBtsScene .stand.tip{left:7%}.eqBtsScene .stand.root{right:7%}
+.eqBtsScene .label{position:absolute;top:16%;color:#68d2fa;font-size:11px;letter-spacing:.08em}
+.eqBtsScene .label.tip{left:8%}.eqBtsScene .label.root{right:8%}
+.eqFunctions{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px}
+.eqFunction{border:1px solid #1d4b69;background:#061826;border-radius:10px;padding:13px;text-align:center}
+.eqFunction b{display:block;color:#e9f7ff;margin-bottom:5px}.eqFunction span{color:#8fa8b9;font-size:10px}
+.eqProcess{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}
+.eqProcessStep{border:1px solid #1b4b6a;border-radius:11px;background:#061927;min-height:330px;padding:16px 12px;position:relative}
+.eqProcessStep.green{border-color:#34734d;background:linear-gradient(180deg,#0b3424,#071d16)}
+.eqProcessStep h3{color:#e8f6ff;font-size:15px;text-align:center;margin:0 0 14px}
+.eqProcessStep .bigIcon{font-size:42px;text-align:center;color:#78a6c8;margin:14px 0 18px}.eqProcessStep.green .bigIcon{color:#79d994}
+.eqProcessStep ul{padding-left:17px;margin:0;color:#adc0cd;font-size:10px;line-height:1.8}
+.eqProcessStep:not(:last-child):after{content:"→";position:absolute;right:-12px;top:46%;color:#4ab8f1;font-size:20px;z-index:2}
+.eqCases{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.eqCase{border:1px solid #1d4c6d;background:linear-gradient(145deg,#071b2d,#04121f);border-radius:13px;padding:18px;min-height:490px}
+.eqCase.green{border-color:#2f704c;background:linear-gradient(145deg,#0a2e20,#061b14)}
+.eqCase h2{margin:0;color:#61cdff;font-size:17px}.eqCase.green h2{color:#77e7a3}
+.eqCase .sub{color:#8da5b8;font-size:10px;margin:6px 0 15px}
+.eqCaseFlow{display:grid;gap:7px}
+.eqCaseFlow div{border:1px solid #245879;background:#061724;border-radius:7px;padding:9px;text-align:center;color:#b2c4d0;font-size:10px}
+.eqCase.green .eqCaseFlow div{border-color:#347854;background:#082319}
+.eqCaseFlow .down{border:0;background:transparent;padding:0;color:#49bdf5;font-size:13px}
+.eqGainLayout{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}
+.eqGrowthPath{border:1px solid #1b4b69;background:#061826;border-radius:13px;padding:18px}
+.eqGrowthTitle{color:#5fcaff;font-size:17px;font-weight:700;margin-bottom:15px}
+.eqGrowthStages{display:grid;grid-template-columns:1fr 54px 1.4fr 54px 1fr;align-items:center;gap:8px}
+.eqStage{border:1px solid #1c4a68;border-radius:12px;background:#071a29;padding:17px;text-align:center;min-height:210px}
+.eqStage h3{color:#e9f7ff;margin:0 0 12px}.eqStage p{color:#a9bdca;font-size:10px;line-height:1.8;margin:0}
+.eqArrow{font-size:30px;color:#4dbcf4;text-align:center}
+.eqWorld{border:1px solid #1b4b69;background:#061826;border-radius:13px;padding:18px;min-height:100%}
+.eqWorld h3{color:#5fcaff;margin:0 0 12px}.eqMap{height:250px;border-radius:10px;background:radial-gradient(circle at 50% 50%,#0e3a5d,#04131f);position:relative;overflow:hidden}
+.eqMap:before{content:"";position:absolute;inset:20px;background-image:radial-gradient(#2f7fae 1px,transparent 1px);background-size:10px 10px;opacity:.35}
+.eqMap .route{position:absolute;left:18%;right:18%;top:48%;height:2px;background:#e45159;transform:rotate(-5deg);box-shadow:0 0 10px #e45159}
+.eqMap .pin{position:absolute;width:14px;height:14px;border-radius:50% 50% 50% 0;background:#27a9ff;transform:rotate(-45deg)}.eqMap .pin.a{left:15%;top:58%}.eqMap .pin.b{right:15%;top:43%}
+.eqWorldList{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}
+.eqWorldItem{border:1px solid #1d4b69;border-radius:8px;padding:10px;color:#a9bdca;font-size:10px;text-align:center}
+.eqOverviewNative{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.eqOverviewNative article{border:1px solid #1d4b6c;background:linear-gradient(145deg,#071b2d,#04121f);border-radius:13px;padding:18px;min-height:320px;cursor:pointer}
+.eqOverviewNative article:hover{border-color:#43a9dc;transform:translateY(-2px)}
+.eqOverviewNative h2{color:#60ccff;font-size:19px;margin:0 0 8px}.eqOverviewNative p{color:#a7bac8;font-size:11px;line-height:1.65}
+.eqOverviewMini{margin-top:14px}
+.eqOverviewMini .tag{display:inline-block;border:1px solid #245676;border-radius:999px;padding:6px 9px;margin:3px;color:#9fc2d8;font-size:9px}
+@media(max-width:1100px){
+ .eqNativeNav,.eqProcess,.eqFunctions{grid-template-columns:1fr}
+ .eqTwoCol,.eqCases,.eqGainLayout,.eqGrowthStages,.eqOverviewNative{grid-template-columns:1fr}
+ .eqProcessStep:after{display:none}.eqArrow{transform:rotate(90deg)}
+}
+
+/* V15 equipment internship template */
+.eqTemplateHeader{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.eqTemplateIndex{width:72px;height:56px;border-radius:7px;background:linear-gradient(180deg,#1f96ff,#1671bd);display:grid;place-items:center;font-size:28px;font-weight:800;color:#fff;box-shadow:0 0 20px rgba(36,156,255,.25)}
+.eqTemplateTitle h1{margin:0;font-size:27px}.eqTemplateTitle p{margin:5px 0 0;color:#9fb2c1;font-size:12px}
+.eqTopNav{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:16px}
+.eqTopNav button{border:1px solid #1d4d6c;background:#071622;color:#93a8ba;border-radius:8px;padding:11px 8px;cursor:pointer}
+.eqTopNav button:hover,.eqTopNav button.active{background:linear-gradient(135deg,#0d78ca,#154b7b);border-color:#38afff;color:#fff}
+.eqPanel{border:1px solid #184b6b;background:linear-gradient(145deg,#061827,#03111d);border-radius:13px;padding:18px}
+.eqPanelTitle{display:flex;align-items:center;gap:10px;margin-bottom:8px}.eqPanelTitle .n{font-size:30px;color:#55caff;font-weight:800}.eqPanelTitle h2{margin:0;color:#edf7ff;font-size:22px}.eqPanelTitle span{color:#a8bac7;font-size:12px}
+.eqSub{color:#a4b7c5;font-size:11px;margin-bottom:14px}
+.eqOverviewLayout{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.eqOverviewLayout .eqPanel{min-height:330px}
+.eqKpiList{display:grid;gap:10px;width:190px}
+.eqKpi{border-bottom:1px solid #163b55;padding-bottom:10px}.eqKpi b{display:block;color:#50c8ff;font-size:14px;margin-bottom:4px}.eqKpi span{display:block;color:#f1f7fb;font-size:18px}
+.eqOverviewProject{display:grid;grid-template-columns:190px 1fr;gap:16px}
+.eqOverviewBts{min-height:250px;position:relative;background:radial-gradient(circle at 50% 50%,#0a3150,#03101b 68%);border-radius:10px;border:1px solid #184766;overflow:hidden}
+.eqOverviewBts .blade{position:absolute;left:18%;right:18%;top:46%;height:34px;background:linear-gradient(180deg,#f6f8fa,#b6c4cf);border-radius:60% 13px 13px 60%}
+.eqOverviewBts .stand{position:absolute;top:23%;width:92px;height:165px;border:12px solid #7b8995;border-radius:48px;background:#0b141c;box-shadow:0 0 0 5px #293d4a}
+.eqOverviewBts .stand:after{content:"";position:absolute;left:-23px;right:-23px;bottom:-35px;height:24px;background:#45535e;border-radius:5px}
+.eqOverviewBts .stand.a{left:8%}.eqOverviewBts .stand.b{right:8%}
+.eqOps{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:12px}.eqOp{border:1px solid #1b4b69;border-radius:8px;padding:9px;text-align:center;color:#b4c6d2;font-size:10px}
+.eqFlowOverview{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.eqFlowCard{border:1px solid #1b4c6b;border-radius:9px;background:#071827;padding:10px;min-height:235px}.eqFlowCard.green{border-color:#35734e;background:#0a2e20}.eqFlowCard h3{font-size:12px;color:#eef7fb;text-align:center;margin:0 0 10px}.eqFlowCard .icon{font-size:30px;text-align:center;margin:10px 0;color:#779ebc}.eqFlowCard.green .icon{color:#78da95}.eqFlowCard ul{margin:0;padding-left:15px;color:#a9bcc9;font-size:9px;line-height:1.7}
+.eqProblemOverview{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.eqMiniCase{border:1px solid #1d4c6c;background:#061725;border-radius:9px;padding:11px}.eqMiniCase.green{border-color:#34754f;background:#082319}.eqMiniCase h3{margin:0 0 5px;color:#61ccff;font-size:12px}.eqMiniCase.green h3{color:#75e39d}.eqMiniCase p{margin:0 0 8px;color:#9fb2c1;font-size:9px}.eqMiniCase div{border:1px solid #24587a;border-radius:5px;padding:6px;margin:5px 0;text-align:center;color:#adc0cd;font-size:8px}.eqMiniCase.green div{border-color:#347853}
+.eqGainOverview{display:grid;grid-template-columns:1.25fr .75fr;gap:10px}.eqGrowthBox,.eqWorldBox{border:1px solid #1a4967;background:#061725;border-radius:9px;padding:12px}.eqGrowthBox h3,.eqWorldBox h3{color:#56c9ff;margin:0 0 10px;font-size:13px}.eqGrowthStagesMini{display:grid;grid-template-columns:1fr 28px 1.2fr 28px 1fr;align-items:center;gap:4px}.eqGrowthStageMini{border:1px solid #1d4a67;border-radius:7px;padding:9px;text-align:center;color:#a9bdca;font-size:8px;min-height:150px}.eqGrowthStageMini b{display:block;color:#eef7ff;margin-bottom:7px;font-size:10px}.eqGrowthArrowMini{text-align:center;color:#4cbcf3}.eqWorldMapMini{height:145px;background:radial-gradient(circle,#0d3859,#04131f);border-radius:7px;position:relative}.eqWorldMapMini:before{content:"";position:absolute;inset:15px;background-image:radial-gradient(#2f7fae 1px,transparent 1px);background-size:9px 9px;opacity:.35}.eqWorldMapMini:after{content:"";position:absolute;left:18%;right:18%;top:52%;height:2px;background:#e5555d;transform:rotate(-5deg);box-shadow:0 0 8px #e5555d}
+.eqFooterSummary{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}.eqFooterItem{border:1px solid #1b4b69;border-radius:9px;background:#061725;padding:11px;color:#a9bdca;font-size:9px;text-align:center}
+.eqStandalone{min-height:calc(100vh - 90px)}
+@media(max-width:1100px){.eqOverviewLayout,.eqOverviewProject,.eqGainOverview{grid-template-columns:1fr}.eqFlowOverview,.eqProblemOverview,.eqFooterSummary,.eqTopNav{grid-template-columns:1fr}.eqGrowthStagesMini{grid-template-columns:1fr}.eqGrowthArrowMini{transform:rotate(90deg)}}
+
+/* V16: correct equipment internship 01 page */
+.eq01Layout{display:grid;grid-template-columns:260px 1fr;gap:18px}
+.eq01Info{display:grid;gap:0;border-right:1px solid #173f5a;padding-right:16px}
+.eq01Block{padding:12px 0;border-bottom:1px solid #173f5a}
+.eq01Block:last-child{border-bottom:0}
+.eq01Block h3{margin:0 0 6px;color:#4fc7ff;font-size:14px}
+.eq01Block strong{display:block;color:#eef8ff;font-size:19px;margin-bottom:4px}
+.eq01Block p{margin:0;color:#9fb4c3;font-size:11px;line-height:1.55}
+.eq01Visual{display:flex;flex-direction:column;gap:12px}
+.eq01Image{border:1px solid #184c72;border-radius:12px;background:#020a12;min-height:500px;overflow:hidden}
+.eq01Image img{display:block;width:100%;height:100%;max-height:540px;object-fit:cover}
+.eq01Ops{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.eq01Op{border:1px solid #1d4c6b;background:#061725;border-radius:9px;padding:12px;text-align:center;color:#b2c5d1;font-size:10px}
+.eq01Op b{display:block;color:#edf8ff;font-size:12px;margin-bottom:4px}
+@media(max-width:1100px){.eq01Layout{grid-template-columns:1fr}.eq01Info{border-right:0;padding-right:0}.eq01Ops{grid-template-columns:1fr}}
+
+/* V17 — template-faithful equipment internship */
+.eqTopTabs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:14px}
+.eqTopTabs button{border:1px solid #1e4b69;background:#071522;color:#93a9bb;border-radius:8px;padding:10px 8px;cursor:pointer}
+.eqTopTabs button:hover,.eqTopTabs button.active{background:linear-gradient(135deg,#137cc8,#1c5d91);color:#fff;border-color:#40b8ff}
+.eqHeaderBand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.eqHeaderIndex{width:70px;height:58px;border-radius:7px;background:linear-gradient(180deg,#239cff,#1671bd);display:grid;place-items:center;color:#fff;font-size:28px;font-weight:800}
+.eqHeaderText h1{margin:0;font-size:26px}.eqHeaderText p{margin:4px 0 0;color:#a0b4c4;font-size:11px}
+.eqTplPanel{border:1px solid #194b6c;background:linear-gradient(145deg,#061928,#03111d);border-radius:12px;padding:16px}
+.eqTplTitle{display:flex;align-items:center;gap:9px;margin-bottom:6px}.eqTplNo{font-size:31px;font-weight:800;color:#53c9ff}.eqTplTitle h2{margin:0;font-size:22px}.eqTplTitle span{color:#a9bac6;font-size:12px}
+.eqTplSub{margin:0 0 14px;color:#a2b5c4;font-size:11px}
+.eq01Grid{display:grid;grid-template-columns:190px 1fr;gap:16px}
+.eq01Meta{display:grid;align-content:start}
+.eq01MetaItem{padding:10px 0;border-bottom:1px solid #173d56}.eq01MetaItem:last-child{border-bottom:0}
+.eq01MetaItem b{display:block;color:#4fc8ff;font-size:13px;margin-bottom:5px}.eq01MetaItem strong{display:block;color:#eef8ff;font-size:18px}.eq01MetaItem p{margin:3px 0 0;color:#9fb2c1;font-size:10px;line-height:1.5}
+.eq01Photo{border:1px solid #184b6a;background:#020b13;border-radius:10px;overflow:hidden;min-height:360px}
+.eq01Photo img{width:100%;height:100%;max-height:410px;object-fit:cover;display:block}
+.eq01Ops{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:10px}
+.eq01Op{border:1px solid #1c4c6b;border-radius:8px;padding:10px 5px;text-align:center;color:#b5c6d1;font-size:9px;background:#061725}.eq01Op b{display:block;color:#eef8ff;font-size:11px;margin-bottom:3px}
+.eqFlow6{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
+.eqFlowStep{border:1px solid #1b4b69;border-radius:9px;padding:12px 9px;min-height:315px;background:#061827}.eqFlowStep.green{border-color:#35724d;background:linear-gradient(180deg,#0c3424,#071c15)}
+.eqFlowStep h3{font-size:13px;text-align:center;margin:0 0 10px;color:#eef8ff}.eqFlowIcon{text-align:center;font-size:34px;color:#799eb9;margin:14px 0}.eqFlowStep.green .eqFlowIcon{color:#7fdb98}
+.eqFlowStep ul{padding-left:15px;margin:0;color:#a9bdca;font-size:9px;line-height:1.75}
+.eqCase3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.eqCaseCard{border:1px solid #1c4c6b;border-radius:10px;padding:12px;background:#061725}.eqCaseCard.green{border-color:#33754e;background:#082319}
+.eqCaseCard h3{margin:0;color:#61ccff;font-size:13px}.eqCaseCard.green h3{color:#74e29c}.eqCaseCard p{margin:4px 0 10px;color:#9eb1c0;font-size:9px}
+.eqCaseStep{border:1px solid #245979;border-radius:5px;padding:6px;text-align:center;color:#adc0cc;font-size:8px;margin:5px 0}.eqCaseCard.green .eqCaseStep{border-color:#347953}
+.eqGainGrid{display:grid;grid-template-columns:1.35fr .65fr;gap:10px}
+.eqPathBox,.eqIntlBox{border:1px solid #194a69;background:#061725;border-radius:10px;padding:13px}
+.eqBoxTitle{color:#54c8ff;font-size:13px;font-weight:700;margin-bottom:10px}
+.eqPath{display:grid;grid-template-columns:1fr 28px 1.25fr 28px 1fr;gap:4px;align-items:center}
+.eqStage{border:1px solid #1c4a67;border-radius:7px;padding:10px;text-align:center;min-height:180px;color:#a9bcc8;font-size:8px;line-height:1.7}.eqStage b{display:block;color:#eef8ff;font-size:10px;margin-bottom:7px}
+.eqArrow{text-align:center;color:#4dbcf4}
+.eqMap{height:170px;border-radius:7px;background:radial-gradient(circle,#0d3b5e,#04131f);position:relative;overflow:hidden}.eqMap:before{content:"";position:absolute;inset:15px;background-image:radial-gradient(#2f7fae 1px,transparent 1px);background-size:9px 9px;opacity:.34}.eqMap:after{content:"";position:absolute;left:18%;right:18%;top:52%;height:2px;background:#e7545d;transform:rotate(-5deg);box-shadow:0 0 8px #e7545d}
+.eqIntlItems{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}.eqIntlItems div{border:1px solid #1c4a67;border-radius:6px;padding:7px;text-align:center;color:#a8bbc8;font-size:8px}
+.eqOverviewGrid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.eqOverviewGrid2 .eqTplPanel{min-height:315px}
+.eqSummary{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:10px}.eqSummary div{border:1px solid #1c4b69;border-radius:8px;background:#061725;padding:9px;text-align:center;color:#a9bdca;font-size:8px}
+@media(max-width:1100px){
+ .eqTopTabs,.eqFlow6,.eqCase3,.eqSummary{grid-template-columns:1fr}
+ .eq01Grid,.eqGainGrid,.eqOverviewGrid2,.eqPath{grid-template-columns:1fr}
+ .eqArrow{transform:rotate(90deg)}
+}
+
+/* ================= V18 EQUIPMENT INTERNSHIP ================= */
+.eq18-shell{display:flex;flex-direction:column;gap:16px}
+.eq18-head{display:flex;align-items:center;gap:14px}
+.eq18-index{width:76px;height:58px;border-radius:7px;background:linear-gradient(180deg,#229eff,#176eb8);display:grid;place-items:center;color:#fff;font-size:28px;font-weight:800;box-shadow:0 0 22px rgba(45,162,255,.23)}
+.eq18-headtext h1{margin:0;font-size:28px;color:#f1f7fb}
+.eq18-headtext p{margin:4px 0 0;color:#9fb3c3;font-size:12px}
+.eq18-section{border:1px solid #194b6c;background:linear-gradient(145deg,#061928,#03111d);border-radius:13px;padding:18px;min-height:calc(100vh - 120px)}
+.eq18-title{display:flex;align-items:baseline;gap:10px;margin-bottom:5px}
+.eq18-title .no{font-size:34px;color:#50c8ff;font-weight:800}
+.eq18-title h2{margin:0;font-size:25px;color:#edf7ff}
+.eq18-title .en{color:#acbdc9;font-size:13px}
+.eq18-sub{margin:0 0 15px;color:#a3b6c4;font-size:12px}
+
+/* 01 */
+.eq18-bg-grid{display:grid;grid-template-columns:250px 1fr;gap:18px}
+.eq18-facts{display:grid;align-content:start}
+.eq18-fact{padding:13px 0;border-bottom:1px solid #183e57}
+.eq18-fact:last-child{border-bottom:0}
+.eq18-fact h3{margin:0 0 6px;color:#46c6ff;font-size:15px}
+.eq18-fact strong{display:block;color:#f0f7fb;font-size:20px;margin-bottom:4px}
+.eq18-fact p{margin:0;color:#9fb2c0;font-size:11px;line-height:1.6}
+.eq18-bg-visual{display:flex;flex-direction:column;gap:12px}
+.eq18-photo{height:505px;border:1px solid #184b6a;border-radius:11px;overflow:hidden;background:#020b13}
+.eq18-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.eq18-ops{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+.eq18-op{border:1px solid #1d4b69;border-radius:9px;background:#061725;padding:12px;text-align:center}
+.eq18-op b{display:block;color:#eef7fb;font-size:13px;margin-bottom:4px}
+.eq18-op span{color:#93aaba;font-size:10px}
+
+/* 02 */
+.eq18-flow{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.eq18-flow-card{border:1px solid #1b4b69;border-radius:10px;background:#061827;min-height:430px;padding:15px 11px;position:relative}
+.eq18-flow-card.green{border-color:#33734d;background:linear-gradient(180deg,#0b3424,#071d16)}
+.eq18-flow-card h3{margin:0 0 12px;text-align:center;color:#eef7fb;font-size:14px}
+.eq18-icon{font-size:42px;text-align:center;color:#7da0ba;margin:18px 0}
+.eq18-flow-card.green .eq18-icon{color:#7dd89a}
+.eq18-flow-card ul{margin:0;padding-left:17px;color:#aabdc9;font-size:10px;line-height:1.85}
+.eq18-flow-card:not(:last-child):after{content:"→";position:absolute;right:-13px;top:44%;font-size:20px;color:#42b9f4;z-index:3}
+
+/* 03 */
+.eq18-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.eq18-case{border:1px solid #1d4c6c;border-radius:11px;background:#061725;padding:16px;min-height:560px}
+.eq18-case.green{border-color:#34754f;background:linear-gradient(180deg,#0a2c20,#071d16)}
+.eq18-case h3{margin:0;color:#62ccff;font-size:16px}
+.eq18-case.green h3{color:#77e09e}
+.eq18-case .desc{color:#9eb1bf;font-size:10px;margin:6px 0 14px}
+.eq18-case-step{border:1px solid #245979;border-radius:6px;padding:8px;text-align:center;color:#afc1cd;font-size:10px;margin:7px 0;background:#061725}
+.eq18-case.green .eq18-case-step{border-color:#347953;background:#082319}
+.eq18-arrow{border:0;background:transparent;text-align:center;color:#46baf2;font-size:13px;margin:-2px 0}
+
+/* 04 */
+.eq18-gain{display:grid;grid-template-columns:1.27fr .73fr;gap:14px}
+.eq18-box{border:1px solid #194a68;border-radius:11px;background:#061725;padding:16px}
+.eq18-box-title{color:#54c8ff;font-size:15px;font-weight:700;margin-bottom:13px}
+.eq18-path{display:grid;grid-template-columns:1fr 42px 1.25fr 42px 1fr;gap:7px;align-items:center}
+.eq18-stage{border:1px solid #1d4a67;border-radius:9px;padding:15px;text-align:center;min-height:250px;color:#a9bcc9;font-size:10px;line-height:1.85}
+.eq18-stage b{display:block;color:#eef7fb;font-size:12px;margin-bottom:10px}
+.eq18-path-arrow{text-align:center;color:#4cbcf4;font-size:28px}
+.eq18-map{height:270px;border-radius:9px;background:radial-gradient(circle,#0e3b5e,#04131f);position:relative;overflow:hidden}
+.eq18-map:before{content:"";position:absolute;inset:18px;background-image:radial-gradient(#2f7fae 1px,transparent 1px);background-size:10px 10px;opacity:.35}
+.eq18-map:after{content:"";position:absolute;left:18%;right:18%;top:52%;height:2px;background:#e4555d;transform:rotate(-5deg);box-shadow:0 0 9px #e4555d}
+.eq18-map .pin{position:absolute;width:14px;height:14px;background:#2ca9ff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);z-index:2}
+.eq18-map .pin.left{left:17%;top:60%}
+.eq18-map .pin.right{right:17%;top:43%}
+.eq18-intl{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}
+.eq18-intl div{border:1px solid #1d4a67;border-radius:7px;padding:9px;text-align:center;color:#a9bbc8;font-size:9px}
+
+/* Overview */
+.eq18-overview{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.eq18-over-card{border:1px solid #194b6b;border-radius:11px;background:linear-gradient(145deg,#061928,#03111d);padding:14px;min-height:370px;cursor:pointer}
+.eq18-over-card:hover{border-color:#42b8f2;transform:translateY(-2px)}
+.eq18-over-card .eq18-title .no{font-size:28px}
+.eq18-over-card .eq18-title h2{font-size:19px}
+.eq18-over-photo{height:205px;border:1px solid #184b69;border-radius:8px;overflow:hidden}
+.eq18-over-photo img{width:100%;height:100%;object-fit:cover}
+.eq18-over-flow{display:grid;grid-template-columns:repeat(6,1fr);gap:5px}
+.eq18-over-flow div{border:1px solid #1c4c6a;border-radius:6px;padding:10px 4px;text-align:center;color:#aabeca;font-size:9px}
+.eq18-over-flow div.green{border-color:#34734d;background:#092a1d}
+.eq18-over-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.eq18-over-cases div{border:1px solid #1c4c6a;border-radius:7px;padding:12px 7px;text-align:center;color:#aabeca;font-size:9px}
+.eq18-over-cases div.green{border-color:#34734d;background:#092a1d}
+.eq18-over-gain{display:grid;grid-template-columns:1fr 35px 1.2fr 35px 1fr;gap:5px;align-items:center}
+.eq18-over-stage{border:1px solid #1c4a67;border-radius:7px;padding:10px;text-align:center;color:#a9bdca;font-size:9px;min-height:135px}
+.eq18-over-arrow{text-align:center;color:#4cbcf4}
+.eq18-summary{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.eq18-summary div{border:1px solid #1c4b69;border-radius:8px;background:#061725;padding:11px;text-align:center;color:#a9bdca;font-size:9px}
+
+@media(max-width:1100px){
+ .eq18-bg-grid,.eq18-gain,.eq18-overview{grid-template-columns:1fr}
+ .eq18-flow,.eq18-cases,.eq18-summary{grid-template-columns:1fr}
+ .eq18-flow-card:after{display:none}
+ .eq18-path,.eq18-over-gain{grid-template-columns:1fr}
+ .eq18-path-arrow,.eq18-over-arrow{transform:rotate(90deg)}
+ .eq18-photo{height:auto}
+}
+
+.motorGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.motorSplit{display:grid;grid-template-columns:.82fr 1.18fr;gap:20px}
+.motorCard{border:1px solid #1d4b6b;background:linear-gradient(145deg,#071b2d,#04121f);border-radius:13px;padding:20px;min-height:290px}
+.motorCard h2{margin:0 0 8px;color:#61ccff;font-size:21px}.motorCard p{margin:0;color:#a8bac7;font-size:12px;line-height:1.7}
+.motorTag{display:inline-block;border:1px solid #275a7b;border-radius:999px;padding:6px 9px;margin:9px 6px 0 0;color:#9fc7dd;font-size:9px}
+.motorFlow{display:grid;gap:10px;margin-top:16px}.motorStep{border-left:3px solid #45b9f3;background:#071827;padding:12px 14px;color:#b1c3cf;font-size:12px;line-height:1.55}.motorStep.green{border-left-color:#58d98a}
+.gdtGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.gdtBox{border:1px solid #1c4b6a;border-radius:11px;background:#061827;padding:18px}.gdtSymbol{font-size:30px;color:#58c9ff;font-weight:700;margin-bottom:10px}.gdtBox h3{margin:0 0 8px;color:#eef8ff;font-size:16px}.gdtBox p{margin:0;color:#a8bac7;font-size:11px;line-height:1.65}
+.dfmeaTable{display:grid;grid-template-columns:1.1fr 1fr 1fr .7fr;gap:1px;background:#1a3f58;border:1px solid #1a3f58;border-radius:10px;overflow:hidden}.dfmeaCell{background:#061725;padding:12px;color:#acc0cc;font-size:10px;min-height:58px}.dfmeaHead{background:#0b2740;color:#61ccff;font-weight:700}
+.motorVisual{border:1px solid #184b6c;border-radius:13px;background:radial-gradient(circle at 50% 45%,#0d3555,#020b14 72%);min-height:500px;position:relative;overflow:hidden;padding:22px}
+.motorRotor{position:absolute;left:50%;top:50%;width:230px;height:230px;border-radius:50%;transform:translate(-50%,-50%);background:#55636d;box-shadow:0 0 0 38px #1c2d39,0 0 0 72px #7c8b95}.motorRotor:before{content:"";position:absolute;left:50%;top:50%;width:72px;height:72px;border-radius:50%;background:#0b151d;transform:translate(-50%,-50%);box-shadow:0 0 0 14px #b3bec6}.motorRotor:after{content:"";position:absolute;left:-48px;right:-48px;top:50%;height:18px;background:#9ba8b2;transform:translateY(-50%);z-index:-1}
+.motorLabel{position:absolute;color:#65d0fb;font-size:11px;letter-spacing:.08em}.motorLabel.stator{left:11%;top:16%}.motorLabel.rotor{right:12%;top:18%}.motorLabel.shaft{right:13%;bottom:18%}
+.projectTimeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.projectStage{border:1px solid #1c4b6b;border-radius:11px;background:#061827;padding:18px;min-height:180px}.projectStage h3{color:#59caff;margin:0 0 10px;font-size:15px}.projectStage p{margin:0;color:#a8bac7;font-size:11px;line-height:1.7}
+.motorOverview{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.motorOverview article{border:1px solid #1d4b6b;background:linear-gradient(145deg,#071b2d,#04121f);border-radius:12px;padding:18px;min-height:250px;cursor:pointer}.motorOverview article:hover{border-color:#43a9dc;transform:translateY(-2px)}.motorOverview h2{margin:0 0 9px;color:#62cfff;font-size:19px}.motorOverview p{margin:0;color:#a8bac7;font-size:11px;line-height:1.65}
+@media(max-width:1050px){.motorGrid,.motorSplit,.gdtGrid,.projectTimeline,.motorOverview{grid-template-columns:1fr}.dfmeaTable{grid-template-columns:1fr}}
+
+.motorKeywordGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.motorKeywordCard{border:1px solid #1d4b6b;background:linear-gradient(145deg,#071b2d,#04121f);border-radius:13px;padding:22px;min-height:250px;display:flex;flex-direction:column;justify-content:space-between}
+.motorKeywordCard .index{font-size:12px;color:#4fc9ff;letter-spacing:.14em;margin-bottom:15px}
+.motorKeywordCard h2{margin:0 0 12px;color:#eef8ff;font-size:24px}
+.motorKeywordCard p{margin:0;color:#a8bac7;font-size:12px;line-height:1.75}
+.motorKeywordCard .tags{margin-top:18px}.motorKeywordCard .tags span{display:inline-block;border:1px solid #285976;border-radius:999px;padding:6px 9px;margin:3px;color:#9fc7dc;font-size:9px}
+.motorIntro{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:10px}
+.motorIntro .copyCard{height:100%}
+.motorSummaryBox{border:1px solid #1b4b69;background:#061725;border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;color:#b0c3cf;font-size:13px;line-height:1.9}
+@media(max-width:1100px){.motorKeywordGrid,.motorIntro{grid-template-columns:1fr}}
+
+#case3 .moduleHeader{margin-bottom:18px}
+#case3 .motorKeywordGrid{margin-top:0}
+#case3 .motorKeywordCard{min-height:300px}
+
+#case3 .motorKeywordGrid{
+  align-items:stretch;
+}
+#case3 .motorKeywordCard{
+  min-height:220px !important;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:28px;
+}
+#case3 .motorKeywordCard h3{
+  margin:0;
+  font-size:32px;
+  line-height:1.2;
+}
+
+#case3 .motorKeywordCard{
+  min-height:300px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  justify-content:flex-start !important;
+  text-align:left !important;
+  padding:34px 32px !important;
+}
+#case3 .motorKeywordCard .keywordLabel{
+  color:#46c5ff;
+  font-size:16px;
+  letter-spacing:2px;
+  margin-bottom:28px;
+  font-weight:600;
+}
+#case3 .motorKeywordCard h3{
+  margin:0 !important;
+  font-size:32px !important;
+  line-height:1.2;
+  color:#f3f7fb;
+}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+<div class="identity"><div class="avatar">GY</div><h2>Mechanical Engineer</h2><p>机械工程师</p><em>设计 · 开发 · 交付</em></div>
+<nav class="menu">
+<div class="menuTitle">PORTFOLIO</div>
+<button>⌂　首页</button><button>▣　三段实习经历</button>
+<button class="sub active" data-case="case1">01　设计自动化实习<small>Design Automation</small></button>
+<button class="sub" data-case="case2">02　设备工程师实习<small>FAT / SAT</small></button>
+<button class="sub" data-case="case3">03　电机结构工程师<small>Motor Structure</small></button>
+<div class="menuTitle">NAVIGATION</div><button data-overview-button="1" id="overviewAction">▦　四模块总览</button><button>⌘　能力矩阵</button><button>◈　项目展示</button>
+</nav>
+</aside>
+<main class="main">
+<header class="topbar">
+<div class="title" id="caseTitle">◇ 设计自动化实习 — 模具设计自动化</div>
+<div class="tabs" id="tabs">
+<button class="designTab active tab" data-tab="background">1　项目背景</button><button class="designTab tab" data-tab="parametric">2　参数化设计</button><button class="designTab tab" data-tab="development">3　内部开发</button><button class="designTab tab" data-tab="lessons">4　困难与收获</button>
+<button class="tab eqTab" data-tab="eq-background" style="display:none">1　项目背景</button><button class="tab eqTab" data-tab="eq-fat-sat" style="display:none">2　设备验证与交付</button><button class="tab eqTab" data-tab="eq-solving" style="display:none">3　问题解决</button><button class="tab eqTab" data-tab="eq-lessons" style="display:none">4　能力提升与收获</button></div>
+<div class="actions"><button class="action" id="fullscreen">⛶</button></div>
+</header>
+<section class="page active" id="background">
+<div class="module">
+<div class="moduleHeader"><div><div class="num">01.</div><h1>项目背景</h1><p>生产与软件变化带来的挑战，驱动了自动化开发需求</p></div><span class="badge">PROJECT CONTEXT</span></div>
+<div class="heroGrid">
+<div class="story">
+<div class="storyItem"><div class="icon">⚙</div><div><h3>生产工艺与模具结构不断变化</h3><p>模具涉及定位、冷却、分型等复杂结构，自动化模板必须随着生产工艺持续升级。</p></div></div>
+<div class="storyItem"><div class="icon">◇</div><div><h3>NX版本升级与装配结构变更</h3><p>原有自动化基于旧版本和旧装配结构开发，已无法完全满足当前设计需求。</p></div></div>
+<div class="storyItem"><div class="icon">✦</div><div><h3>目标：更新标准并开发新工具</h3><p>提升设计效率和一致性、减少人为错误、支持模板复用，并推动设计结构标准化。</p></div></div>
+</div>
+<div class="imagePanel"><img alt="香水瓶吹制模具剖切示意图" src="portfolio-01.webp"/><div class="caption">香水瓶吹制模具剖切示意：用于说明模具结构、型腔及装配关系。</div></div>
+</div>
+<div class="objectives"><div class="objective"><b>缩短设计时间</b>自动处理重复工作</div><div class="objective"><b>减少人为错误</b>固化标准与规则</div><div class="objective"><b>提高结构标准化</b>保证设计一致性</div><div class="objective"><b>支持模板复用</b>便于维护与迭代</div></div>
+<div class="quote"><span>这项工作不是为了编程而编程，而是把机械设计标准转化为可复用的工程工具。</span><b>“自动化不是替代设计师，而是让设计师更专注于创造。”</b></div>
+</div>
+</section>
+<section class="page" id="parametric">
+<div class="module">
+<div class="moduleHeader"><div><div class="num">02.</div><h1>参数化设计（NX PTS）</h1><p>把模具结构、设计规则和标准值封装为可复用模板</p></div><span class="badge">PARAMETRIC DESIGN</span></div>
+<div class="contentGrid">
+<div class="copyCard"><h2>将机械设计规则转化为参数</h2><div class="bullets"><div class="bullet">使用 NX Product Template Studio 建立标准化模板。</div><div class="bullet">将分型结构的关键尺寸转化为可配置输入参数。</div><div class="bullet">参数变化后自动驱动几何更新，避免重复寻找和修改特征。</div><div class="bullet">统一标准值与建模逻辑，保证不同设计人员输出的一致性。</div><div class="bullet">支持模板复用、维护和后续工艺迭代。</div></div><div class="effect"><div>快速配置结构</div><div>保证设计标准</div><div>减少重复建模</div><div>便于模板复用</div></div></div>
+<div class="mediaCard"><img alt="NX PTS Joint Mold interface" src="portfolio-02.webp"/></div>
+</div>
+<div class="quote"><span>在做自动化之前，必须先理解分型结构的作用、设计尺寸之间的关系以及设计师的建模逻辑。</span><b>Mechanical Rules → Parameters → Geometry</b></div>
+</div>
+</section>
+<section class="page" id="development">
+<div class="module">
+<div class="moduleHeader"><div><div class="num">03.</div><h1>内部开发（NXOpen / VB.NET）</h1><p>解决跨组件、文件管理和装配链接修复问题</p></div><span class="badge">INTERNAL DEVELOPMENT</span></div>
+<div class="devGrid">
+<div class="copyCard"><h2>面向真实设计流程开发工具</h2><div class="bullets"><div class="bullet">使用 NXOpen 与 VB.NET 开发面向设计师的自动化工具。</div><div class="bullet">核心工具 Restore Inter-part Links：识别并恢复 WAVE Links 与 Interpart Expressions 的断链。</div><div class="bullet">开发 Delete Component，减少删除装配节点和关联文件时的重复操作。</div><div class="bullet">工具集成到内部开发工具栏中，便于设计人员直接调用。</div></div><div class="resultList"><div class="result">Restore Links 工具开发与界面设计</div><div class="result">Delete Component 工具开发</div><div class="result">工具集成到内部开发工具栏</div><div class="result">降低手动检查和修复时间</div></div></div>
+<div class="devVisuals"><div class="imgBox"><img alt="Restore links broken link list" src="portfolio-03.webp"/></div><div class="imgBox"><img alt="NXOpen 自动化工具代码示例" src="portfolio-04.webp"/></div></div>
+</div>
+<div class="quote"><span>程序通过检测、分类、匹配、修复与验证，将复杂装配中的链接问题转化为可操作的流程。</span><b>Detect → Match → Repair → Validate</b></div>
+</div>
+</section>
+<section class="page" id="lessons">
+<div class="module">
+<div class="moduleHeader"><div><div class="num">04.</div><h1>困难与收获</h1><p>理解设计逻辑、覆盖多场景，并持续优化方案</p></div><span class="badge">CHALLENGES &amp; LEARNING</span></div>
+<div class="lessonGrid">
+<div><div class="lessonCards"><div class="lesson"><h3>装配结构复杂、链接依赖关系多</h3><p>模具装配中存在大量 WAVE Links 和 Interpart Expressions，需要准确理解组件之间的几何与参数来源。</p></div><div class="lesson"><h3>理解设计师的设计思路</h3><p>自动化方案不能只根据程序逻辑设计，需要理解设计师如何建模、修改和处理例外情况，并据此不断优化操作流程。</p></div><div class="lesson"><h3>反复测试多种应用场景</h3><p>通过不同模具、不同断链状态和不同装配结构进行测试，持续修正边界条件，确保程序可靠性。</p></div></div><div class="growth"><h3>收获与成长</h3><div class="check">掌握 NX PTS 参数化方法和模板开发</div><div class="check">熟悉 NXOpen 二次开发与界面设计</div><div class="check">理解模具设计标准和复杂装配逻辑</div><div class="check">提升问题分析、测试验证与持续优化能力</div><div class="check">增强跨团队需求沟通与协作能力</div></div></div>
+<div class="mediaCard"><img alt="吹制模具装配结构层级图" src="portfolio-05.webp"/></div>
+</div>
+<div class="quote"><span>最终形成了从标准理解、模板开发、工具实现、测试验证到落地应用的完整闭环。</span><b>“自动化让设计更高效，也让工程更可靠。”</b></div>
+</div>
+</section>
+<section class="page" id="overview">
+<div class="module">
+<div class="moduleHeader"><div><div class="num">00.</div><h1>四模块总览</h1><p>在一个界面中快速回顾第一次实习的完整工程链路</p></div><span class="badge">ALL MODULES</span></div>
+<div class="overviewGrid">
+<article class="overviewCard" data-open="background"><h2>1. 项目背景</h2><p>生产工艺、NX版本与装配结构变化，需要更新标准并开发新的自动化能力。</p><img src="portfolio-06.webp"/></article>
+<article class="overviewCard" data-open="parametric"><h2>2. 参数化设计</h2><p>使用 NX PTS 将机械设计规则转化为参数、模板与自动更新的几何结构。</p><img src="portfolio-02.webp"/></article>
+<article class="overviewCard" data-open="development"><h2>3. 内部开发</h2><p>使用 NXOpen / VB.NET 开发 Restore Links 和 Delete Component，并集成到内部工具栏。</p><img src="portfolio-07.webp"/></article>
+<article class="overviewCard" data-open="lessons"><h2>4. 困难与收获</h2><p>理解设计师思路，反复测试多种应用场景，确保自动化方案可靠且可维护。</p><img src="portfolio-08.webp"/></article>
+</div>
+<div class="quote"><span>机械设计知识与数字化工具结合：标准理解 → 参数化模板 → 内部工具 → 测试验证 → 落地应用。</span><b>Design × Automation</b></div>
+</div>
+</section>
+<section class="page" id="eq-overview"><div class="module">
+<div class="eq18-shell">
+<div class="eq18-head">
+<div class="eq18-index">02</div>
+<div class="eq18-headtext">
+<h1>设备工程师实习项目概览</h1>
+<p>参与工业设备项目全生命周期：从生产调试到客户验收</p>
+</div>
+</div>
+<div class="eq18-section">
+<div class="eq18-title">
+<div class="no">00</div>
+<h2>四模块总览</h2>
+<div class="en">| All Modules</div>
+</div>
+<p class="eq18-sub">01 项目背景 / 02 设备验证与交付流程 / 03 问题解决 / 04 能力提升与收获</p>
+<div class="eq18-overview">
+<article class="eq18-over-card" data-open="eq-background">
+<div class="eq18-title"><div class="no">01</div><h2>项目背景</h2><div class="en">| Project Background</div></div>
+<p class="eq18-sub">BTS应用于风电叶片制造，最大承重80吨，适用叶片长度115 m。</p>
+<div class="eq18-over-photo"><img alt="BTS" src="portfolio-09.webp"/></div>
+<div class="eq18-ops" style="margin-top:8px">
+<div class="eq18-op"><b>装载</b></div><div class="eq18-op"><b>翻转</b></div><div class="eq18-op"><b>升降</b></div><div class="eq18-op"><b>卸载</b></div><div class="eq18-op"><b>转运</b></div>
+</div>
+</article>
+<article class="eq18-over-card" data-open="eq-fat-sat">
+<div class="eq18-title"><div class="no">02</div><h2>设备验证与交付流程</h2><div class="en">| FAT → SAT</div></div>
+<p class="eq18-sub">从工厂验收到客户现场投产，确保设备满足功能与安全要求。</p>
+<div class="eq18-over-flow">
+<div>设备调试</div><div>工厂验收 FAT</div><div>运输发运</div><div>现场安装与调试</div><div class="green">现场验收 SAT</div><div class="green">培训与交付</div>
+</div>
+</article>
+<article class="eq18-over-card" data-open="eq-solving">
+<div class="eq18-title"><div class="no">03</div><h2>问题解决</h2><div class="en">| Problem Solving</div></div>
+<p class="eq18-sub">通过系统化分析定位问题根因，提出有效解决方案。</p>
+<div class="eq18-over-cases">
+<div>Zero Level Alarm<br/><br/>零位检查与重新设定</div>
+<div>Motor Brake Issue<br/><br/>电气、I/O与间隙排查</div>
+<div class="green">Root–Tip 同步<br/><br/>偏差分析、参数优化、动态补偿</div>
+</div>
+</article>
+<article class="eq18-over-card" data-open="eq-lessons">
+<div class="eq18-title"><div class="no">04</div><h2>能力提升与收获</h2><div class="en">| Skill &amp; Gain</div></div>
+<p class="eq18-sub">从机械工程到多学科系统工程。</p>
+<div class="eq18-over-gain">
+<div class="eq18-over-stage">Before<br/><br/>机械工程</div>
+<div class="eq18-over-arrow">→</div>
+<div class="eq18-over-stage">During Project<br/><br/>机械 × 电气 × 项目 × PLC / 自动化 × 安全</div>
+<div class="eq18-over-arrow">→</div>
+<div class="eq18-over-stage">After<br/><br/>系统工程师</div>
+</div>
+</article>
+</div>
+<div class="eq18-summary">
+<div>深入理解工业设备全生命周期</div>
+<div>掌握设备调试、FAT / SAT流程与方法</div>
+<div>提升跨学科问题分析与解决能力</div>
+<div>增强与国际团队、客户的沟通协作能力</div>
+<div>积累风电行业设备工程实践经验</div>
+</div>
+</div>
+</div>
+</div></section><section class="page" id="eq-lessons"><div class="module">
+<div class="eq18-shell">
+<div class="eq18-head">
+<div class="eq18-index">02</div>
+<div class="eq18-headtext">
+<h1>设备工程师实习项目概览</h1>
+<p>参与工业设备项目全生命周期：从生产调试到客户验收</p>
+</div>
+</div>
+<div class="eq18-section">
+<div class="eq18-title">
+<div class="no">04</div>
+<h2>能力提升与收获</h2>
+<div class="en">| Skill &amp; Gain</div>
+</div>
+<p class="eq18-sub">从机械工程到多学科系统工程，提升解决复杂工程问题的能力。</p>
+<div class="eq18-gain">
+<div class="eq18-box">
+<div class="eq18-box-title">能力提升路径</div>
+<div class="eq18-path">
+<div class="eq18-stage"><b>Before</b>机械工程<br/>机械设计基础<br/>结构分析<br/>绘图与工艺</div>
+<div class="eq18-path-arrow">→</div>
+<div class="eq18-stage"><b>During Project</b>机械 × 电气 × 项目 × PLC / 自动化 × 安全<br/><br/>电气与自动化<br/>液压系统调试<br/>电气控制分析<br/>PLC 控制与编程</div>
+<div class="eq18-path-arrow">→</div>
+<div class="eq18-stage"><b>After</b>系统工程师<br/>系统思维<br/>问题分析与解决<br/>项目管理意识<br/>沟通与协作</div>
+</div>
+</div>
+<div class="eq18-box">
+<div class="eq18-box-title">国际化工程经验</div>
+<div class="eq18-map"><div class="pin left"></div><div class="pin right"></div></div>
+<div class="eq18-intl">
+<div>跨部门协作<br/>沟通与协调</div>
+<div>文档管理<br/>高效沟通</div>
+<div>国际标准与规范<br/>CE、安全标准等</div>
+<div>客户沟通与<br/>需求对接</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></section><section class="page" id="eq-solving"><div class="module">
+<div class="eq18-shell">
+<div class="eq18-head">
+<div class="eq18-index">02</div>
+<div class="eq18-headtext">
+<h1>设备工程师实习项目概览</h1>
+<p>参与工业设备项目全生命周期：从生产调试到客户验收</p>
+</div>
+</div>
+<div class="eq18-section">
+<div class="eq18-title">
+<div class="no">03</div>
+<h2>问题解决</h2>
+<div class="en">| Problem Solving</div>
+</div>
+<p class="eq18-sub">通过系统化分析定位问题根因，提出有效解决方案，确保设备稳定运行。</p>
+<div class="eq18-cases">
+<article class="eq18-case">
+<h3>Case 01 · Zero Level Alarm</h3>
+<div class="desc">传感器零位不一致导致报警</div>
+<div class="eq18-case-step">异常排查</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">检查传感器状态</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">校对零位范围</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">Sensor Zero / Mechanical Zero</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">IO-Link Device Tool 检测与校准</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">Set Nullpoint Offset 重新设定</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">Alarm Eliminated</div>
+</article>
+<article class="eq18-case">
+<h3>Case 02 · Motor Brake Issue</h3>
+<div class="desc">电机制动器问题排查</div>
+<div class="eq18-case-step">HM 制动器原理</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">查看电气回路</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">检查 I/O 信号</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">检查制动时间</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">调整制动器间隙</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">功能验证</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">问题解决</div>
+</article>
+<article class="eq18-case green">
+<h3>Case 03 · Root–Tip 同步</h3>
+<div class="desc">Root 与 Tip 不同步导致定位偏差</div>
+<div class="eq18-case-step">同步控制原理分析</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">位置与速度偏差分析</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">控制参数优化</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">动态调节与补偿</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">测试验证</div><div class="eq18-arrow">↓</div><div class="eq18-case-step">同步性能提升</div>
+</article>
+</div>
+</div>
+</div>
+</div></section><section class="page" id="eq-fat-sat"><div class="module">
+<div class="eq18-shell">
+<div class="eq18-head">
+<div class="eq18-index">02</div>
+<div class="eq18-headtext">
+<h1>设备工程师实习项目概览</h1>
+<p>参与工业设备项目全生命周期：从生产调试到客户验收</p>
+</div>
+</div>
+<div class="eq18-section">
+<div class="eq18-title">
+<div class="no">02</div>
+<h2>设备验证与交付流程</h2>
+<div class="en">| FAT → SAT</div>
+</div>
+<p class="eq18-sub">从工厂验收到客户现场投产，确保设备满足功能与安全要求。</p>
+<div class="eq18-flow">
+<article class="eq18-flow-card">
+<h3>设备调试</h3><div class="eq18-icon">⚙</div>
+<ul><li>机械安装调试</li><li>电气接线检查</li><li>控制系统配置</li><li>功能单元测试</li></ul>
+</article>
+<article class="eq18-flow-card">
+<h3>工厂验收（FAT）</h3><div class="eq18-icon">☑</div>
+<ul><li>静态检查</li><li>油漆检查</li><li>传感器与定位校验</li><li>效果 / 动作逻辑检查</li><li>动态功能测试</li></ul>
+</article>
+<article class="eq18-flow-card">
+<h3>运输发运</h3><div class="eq18-icon">▰</div>
+</article>
+<article class="eq18-flow-card">
+<h3>现场安装与调试</h3><div class="eq18-icon">🛠</div>
+<ul><li>机械安装与定位</li><li>油路检查</li><li>电气、液压系统检查</li><li>控制系统调试</li><li>功能单元联调</li></ul>
+</article>
+<article class="eq18-flow-card green">
+<h3>现场验收（SAT）</h3><div class="eq18-icon">⬟</div>
+<ul><li>真实性能验证</li><li>功能验证与安全验证</li><li>性能参数测量记录</li><li>验收文档签署</li></ul>
+</article>
+<article class="eq18-flow-card green">
+<h3>培训与交付</h3><div class="eq18-icon">▣</div>
+<ul><li>客户操作培训</li><li>维护保养培训</li><li>文档交付</li><li>项目交接</li></ul>
+</article>
+</div>
+</div>
+</div>
+</div></section><section class="page" id="eq-background"><div class="module">
+<div class="eq18-shell">
+<div class="eq18-head">
+<div class="eq18-index">02</div>
+<div class="eq18-headtext">
+<h1>设备工程师实习项目概览</h1>
+<p>参与工业设备项目全生命周期：从生产调试到客户验收</p>
+</div>
+</div>
+<div class="eq18-section">
+<div class="eq18-title">
+<div class="no">01</div>
+<h2>项目背景</h2>
+<div class="en">| Project Background</div>
+</div>
+<p class="eq18-sub">参与 Blade Turning Stand（BTS）项目，贯穿设备从生产到现场投产的完整生命周期。</p>
+<div class="eq18-bg-grid">
+<div class="eq18-facts">
+<div class="eq18-fact">
+<h3>应用场景</h3>
+<strong>风电叶片制造</strong>
+<p>用于叶片的装载、翻转、升降和卸载，确保安全高效的生产流程。</p>
+</div>
+<div class="eq18-fact">
+<h3>设备名称</h3>
+<strong>Blade Turning Stand（BTS）</strong>
+<p>叶片翻转换位转运设备。</p>
+</div>
+<div class="eq18-fact"><h3>最大承重</h3><strong>80 吨</strong></div>
+<div class="eq18-fact"><h3>适用叶片长度</h3><strong>115 m</strong></div>
+<div class="eq18-fact">
+<h3>核心功能</h3>
+<strong style="font-size:14px">升降 / 翻转 / 装载 / 卸载 / 转运</strong>
+</div>
+</div>
+<div class="eq18-bg-visual">
+<div class="eq18-photo"><img alt="Blade Turning Stand 支撑风电叶片" src="portfolio-09.webp"/></div>
+<div class="eq18-ops">
+<div class="eq18-op"><b>装载</b><span>定位并支撑叶片</span></div>
+<div class="eq18-op"><b>翻转</b><span>协同控制叶片角度</span></div>
+<div class="eq18-op"><b>升降</b><span>适配生产工位高度</span></div>
+<div class="eq18-op"><b>卸载</b><span>完成工序切换</span></div>
+<div class="eq18-op"><b>转运</b><span>支持生产流程衔接</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+<div class="footerNav"></div>
+<section class="page" id="case3"><div class="module"><div class="moduleHeader">
+<div>
+<div class="num">03.</div>
+<h1>电机结构工程师</h1>
+<p>GD&amp;T / DFMEA / 电机结构 / 国际项目合作</p>
+</div>
+<span class="badge">AUTOMOTIVE MOTOR</span>
+</div><div class="motorKeywordGrid">
+<article class="motorKeywordCard"><div class="keywordLabel">KEYWORD 01</div><h3>GD&amp;T</h3></article>
+<article class="motorKeywordCard"><div class="keywordLabel">KEYWORD 02</div><h3>DFMEA</h3></article>
+<article class="motorKeywordCard"><div class="keywordLabel">KEYWORD 03</div><h3>电机结构</h3></article>
+<article class="motorKeywordCard"><div class="keywordLabel">KEYWORD 04</div><h3>国际项目合作</h3></article>
+</div></div></section></main>
+</div>
+<script>
+let ordered=['background','parametric','development','lessons'];
+let current=0,activeCase='case1';
+
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));
+  document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));
+  if(ordered.includes(id)) current=ordered.indexOf(id);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function bindNavigation(){
+  document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>showPage(b.dataset.tab));
+  document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>showPage(b.dataset.open));
+}
+
+const full=document.getElementById('fullscreen');
+if(full) full.onclick=()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();
+
+const overviewAction=document.getElementById('overviewAction');
+if(overviewAction){
+  overviewAction.onclick=()=>{
+    if(activeCase==='case1') showPage('overview');
+    else if(activeCase==='case2') showPage('eq-overview');
+  };
+}
+
+document.querySelectorAll('[data-case]').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('[data-case]').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  activeCase=b.dataset.case;
+
+  const designTabs=document.querySelectorAll('.designTab');
+  const eqTabs=document.querySelectorAll('.eqTab');
+  const tabs=document.getElementById('tabs');
+
+  if(activeCase==='case1'){
+    ordered=['background','parametric','development','lessons'];
+    designTabs.forEach(x=>x.style.display='');
+    eqTabs.forEach(x=>x.style.display='none');
+    tabs.style.display='flex';
+    if(overviewAction) overviewAction.style.display='';
+    document.getElementById('caseTitle').textContent='◇ 设计自动化实习 — 模具设计自动化';
+    showPage('background');
+  }else if(activeCase==='case2'){
+    ordered=['eq-background','eq-fat-sat','eq-solving','eq-lessons'];
+    designTabs.forEach(x=>x.style.display='none');
+    eqTabs.forEach(x=>x.style.display='');
+    tabs.style.display='flex';
+    if(overviewAction) overviewAction.style.display='';
+    document.getElementById('caseTitle').textContent='◇ 设备工程师实习 — FAT / SAT / Commissioning';
+    showPage('eq-background');
+  }else{
+    designTabs.forEach(x=>x.style.display='none');
+    eqTabs.forEach(x=>x.style.display='none');
+    tabs.style.display='none';
+    if(overviewAction) overviewAction.style.display='none';
+    document.getElementById('caseTitle').textContent='◇ 电机结构工程师';
+    showPage('case3');
+  }
+});
+
+bindNavigation();
+</script>
+</body></html>
