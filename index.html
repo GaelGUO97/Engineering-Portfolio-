@@ -369,6 +369,18 @@
   line-height:1.2;
   color:#f3f7fb;
 }
+
+#case3 .motorExplore{
+  margin-top:18px;border:1px solid #24658b;background:linear-gradient(135deg,#08243a,#0b3552);
+  border-radius:13px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;
+  gap:18px;text-decoration:none;color:#edf8ff;transition:.2s;
+}
+#case3 .motorExplore:hover{transform:translateY(-2px);border-color:#43bdf5;box-shadow:0 12px 35px rgba(23,132,198,.18)}
+#case3 .motorExplore strong{display:block;color:#61ccff;font-size:17px;margin-bottom:5px}
+#case3 .motorExplore span{display:block;color:#9fb5c5;font-size:11px;line-height:1.55}
+#case3 .motorExplore b{white-space:nowrap;color:#fff;font-size:12px;letter-spacing:.06em}
+@media(max-width:700px){#case3 .motorExplore{align-items:flex-start;flex-direction:column}}
+
 </style>
 </head>
 <body>
@@ -691,7 +703,12 @@
 <article class="motorKeywordCard"><div class="keywordLabel">KEYWORD 02</div><h3>DFMEA</h3></article>
 <article class="motorKeywordCard"><div class="keywordLabel">KEYWORD 03</div><h3>电机结构</h3></article>
 <article class="motorKeywordCard"><div class="keywordLabel">KEYWORD 04</div><h3>国际项目合作</h3></article>
-</div></div></section></main>
+</div>
+<a class="motorExplore" href="motor-design.html">
+  <div><strong>Motor Design Engineering</strong><span>Interactive studies · Winding · Insulation · Stator · Busbar · Rotor · Thermal · GD&amp;T · DFMEA · Validation</span></div>
+  <b>EXPLORE MOTOR DESIGN →</b>
+</a>
+</div></section></main>
 </div>
 <script>
 let ordered=['background','parametric','development','lessons'];
